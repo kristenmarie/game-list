@@ -1,3 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Teko');
+
+
+
+
 img {
   max-width: 300px;
+  padding-left: 15px;
+  padding-right: 15px;
+
 }
+
+.jumbotron {
+  text-align: center;
+}
+
+.navbar {
+  width: 1170px;
+}
+
+.footer {
+
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+.container{
+  margin-bottom: 75px;
+}
+
+h1 {
+ color: black;
+ font-family: 'Teko', sans-serif;
+ font-size: 82px;
+ font-weight: 400;
+ line-height: 58px;
+ margin: 0 0 58px;
+ text-align: center;
+ margin-top: 50px;
+ }
+
+ body{
+   font-family: 'Montserrat', sans-serif;
+ }
