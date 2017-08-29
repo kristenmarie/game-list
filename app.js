@@ -171,3 +171,10 @@ $('document').ready(function() {
 
   handleAuthentication();
 });
+
+//testing
+$('.firstImg').on('click', function(){
+  var $this = $(this);
+  $($this).clone().appendTo('.favorite-games');
+  console.log($this);
+});
