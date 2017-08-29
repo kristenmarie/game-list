@@ -102,6 +102,10 @@ $('document').ready(function() {
       loginStatus.text('You are not logged in! Please log in to view your profile');
     }
   }
+  $('.picture').click(function () {
+          $(this).clone().appendTo(".user-favorites");
+          // alert($(this).clone());
+        });
 
   function getProfile() {
     if (!userProfile) {
@@ -146,6 +150,7 @@ $('document').ready(function() {
     $('#profile-view .nickname').text(userProfile.nickname);
     $('#profile-view .full-profile').text(JSON.stringify(userProfile, null, 2));
     $('#profile-view img').attr('src', userProfile.picture);
+    // $('.user-favorites').text(myfav);
   }
   function displayMarketPlace(){
     $("#marketplace-view").css('display', 'inline-block');
