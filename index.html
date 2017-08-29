@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>User Profile</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="loading">
+    <img src="assets/loading.svg" alt="Loading spinner">
+  </div>
+
+  <div class="content">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Auth0 - jQuery</a>
+
+          <button id="btn-home-view" class="btn btn-primary btn-margin">
+              Home
+          </button>
+
+          <button id="btn-profile-view" class="btn btn-primary btn-margin">
+              Profile
+          </button>
+
+          <button id="btn-login" class="btn btn-primary btn-margin">
+              Log In
+          </button>
+
+          <button id="btn-logout" class="btn btn-primary btn-margin">
+              Log Out
+          </button>
+
+        </div>
+      </div>
+    </nav>
+
+    <main class="container">
+      <!-- home view -->
+      <div id="home-view">
+        <h4></h4>
+        <h1>Enter the main heading, usually the same as the title.</h1>
+        <p>Be <b>bold</b> in stating your key points. Put them in a list: </p>
+        <ul>
+        <li>The first item in your list</li>
+        <li>The second item; <i>italicize</i> key words</li>
+        </ul>
+        <p>Improve your image by including an image. </p>
+        <p><img src="http://www.mygifs.com/CoverImage.gif" alt="A Great HTML Resource"></p>
+        <p>Add a link to your favorite <a href="http://www.dummies.com/">Web site</a>.
+        Break up your page with a horizontal rule or two. </p>
+        <hr>
+        <p>Finally, link to <a href="page2.html">another page</a> in your own Web site.</p>
+      </div>
+
+      <!-- profile view -->
+      <div id="profile-view" class="panel panel-default profile-area">
+        <div class="panel-heading"><h3>Profile</h3></div>
+          <div class="panel-body">
+            <img class="avatar" alt="avatar">
+            <div>
+              <label><i class="glyphicon glyphicon-user"></i> Nickname</label>
+              <h3 class="nickname"></h3>
+            </div>
+            <pre class="full-profile"></pre>
+          </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/auth0-js/build/auth0.js"></script>
+  <script src="auth0-variables.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
