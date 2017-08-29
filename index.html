@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -23,6 +23,10 @@
 
           <button id="btn-home-view" class="btn btn-primary btn-margin">
               Home
+          </button>
+
+          <button id="btn-marketplace-view" class="btn btn-primary btn-margin">
+              Marketplace
           </button>
 
           <button id="btn-profile-view" class="btn btn-primary btn-margin">
@@ -42,21 +46,89 @@
     </nav>
 
     <main class="container">
+
+      <!-- index/Landing and Logout view -->
+      <div id="home-view" class="login">
+        <p>show this</p>
+      </div>
+
+
       <!-- home view -->
-      <div id="home-view">
-        <h4></h4>
-        <h1>Enter the main heading, usually the same as the title.</h1>
-        <p>Be <b>bold</b> in stating your key points. Put them in a list: </p>
-        <ul>
-        <li>The first item in your list</li>
-        <li>The second item; <i>italicize</i> key words</li>
-        </ul>
-        <p>Improve your image by including an image. </p>
-        <p><img src="http://www.mygifs.com/CoverImage.gif" alt="A Great HTML Resource"></p>
-        <p>Add a link to your favorite <a href="http://www.dummies.com/">Web site</a>.
-        Break up your page with a horizontal rule or two. </p>
-        <hr>
-        <p>Finally, link to <a href="page2.html">another page</a> in your own Web site.</p>
+      <div id="marketplace-view">
+        <div class="jumbotron">
+          <h1>Site Title</h1>
+        </div>
+        <div class="container">
+          <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">GameSpot</a>
+              </div>
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="dashboard.html">Home</a></li>
+                <li><a href="myprofile.html">My Profile</a></li>
+                <li><a href="marketplace.html">Marketplace</a></li>
+              </ul>
+            </div>
+          </nav>
+
+        <br>
+          <div class="row">
+            <div class="col-lg-3">
+              <img src="img/deathstranding.jpg" alt="">
+            </div>
+
+            <div class="col-lg-3">
+              <img src="img/destiny2.jpg" alt="">
+            </div>
+
+            <div class="col-lg-3">
+              <img src="img/FFXV.jpg" alt="">
+            </div>
+
+            <div class="col-lg-3">
+              <img src="img/ME3.jpeg" alt="">
+            </div>
+          </div>
+
+          <br>
+            <div class="row">
+              <div class="col-lg-3">
+                <img src="img/ninokuni.jpg" alt="">
+              </div>
+
+
+              <div class="col-lg-3">
+                <img src="img/overwatch.jpg" alt="">
+              </div>
+
+              <div class="col-lg-3">
+                <img src="img/Persona.jpg" alt="">
+              </div>
+
+              <div class="col-lg-3">
+                <img src="img/PUBG.jpg" alt="">
+              </div>
+            </div>
+
+            <br>
+              <div class="row">
+                <div class="col-lg-3">
+                  <img src="img/MGS3.jpg" alt="">
+                </div>
+
+
+                <div class="col-lg-3">
+                  <img src="img/zelda.jpeg" alt="">
+                </div>
+
+                <div class="col-lg-3">
+                </div>
+
+                <div class="col-lg-3">
+                </div>
+              </div>
+        </div>
       </div>
 
       <!-- profile view -->
@@ -74,7 +146,10 @@
     </main>
   </div>
 
+
+
   <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="js/scripts.js" charset="utf-8"></script>
   <script src="node_modules/auth0-js/build/auth0.js"></script>
   <script src="auth0-variables.js"></script>
   <script src="app.js"></script>

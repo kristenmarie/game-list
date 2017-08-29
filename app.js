@@ -19,23 +19,33 @@ $('document').ready(function() {
   var loginView = $('#login-view');
   var homeView = $('#home-view');
   var profileView = $('#profile-view');
+  var marketplaceView = $('#marketplace-view');
 
   // buttons and event listeners
   var loginBtn = $('#btn-login');
   var logoutBtn = $('#btn-logout');
-
+  var marketPlaceBtn = $('#btn-marketplace-view');
   var homeViewBtn = $('#btn-home-view');
   var profileViewBtn = $('#btn-profile-view');
 
   homeViewBtn.click(function() {
     homeView.css('display', 'inline-block');
     profileView.css('display', 'none');
+    marketplaceView.css('display', 'none');
   });
 
   profileViewBtn.click(function() {
     homeView.css('display', 'none');
+    marketplaceView.css('display', 'none');
     profileView.css('display', 'inline-block');
     getProfile();
+  });
+
+  marketPlaceBtn.click(function() {
+    homeView.css('display', 'none');
+    profileView.css('display', 'none');
+    // marketplaceView.css('display', 'inline-block');
+    getMarketplace();
   });
 
   loginBtn.click(function(e) {
@@ -60,6 +70,7 @@ $('document').ready(function() {
     localStorage.removeItem('access_token');
     localStorage.removeItem('id_token');
     localStorage.removeItem('expires_at');
+    window.location.reload();
     displayButtons();
   }
 
@@ -108,11 +119,33 @@ $('document').ready(function() {
     }
   }
 
+  function getMarketplace() {
+    if (!userProfile) {
+      var accessToken = localStorage.getItem('access_token');
+
+      if (!accessToken) {
+        console.log('Access token must exist to fetch profile');
+      }
+
+      webAuth.client.userInfo(accessToken, function(err, profile) {
+        if (profile) {
+          userProfile = profile;
+          displayMarketPlace();
+        }
+      });
+    } else {
+      displayMarketPlace();
+    }
+  }
+
   function displayProfile() {
     // display the profile
     $('#profile-view .nickname').text(userProfile.nickname);
     $('#profile-view .full-profile').text(JSON.stringify(userProfile, null, 2));
     $('#profile-view img').attr('src', userProfile.picture);
+  }
+  function displayMarketPlace(){
+    $("#marketplace-view").css('display', 'inline-block');
   }
 
   function handleAuthentication() {

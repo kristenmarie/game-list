@@ -10,6 +10,10 @@
   display: none;
 }
 
+#marketplace-view {
+  display: none;
+}
+
 .profile-area img {
   max-width: 150px;
   margin-bottom: 20px;
@@ -30,4 +34,8 @@
   left: 0;
   right: 0;
   background-color: #fff;
+}
+
+img {
+  max-width: 300px;
 }
