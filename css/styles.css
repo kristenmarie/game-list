@@ -7,13 +7,13 @@ img {
   max-width: 300px;
   padding-left: 15px;
   padding-right: 15px;
-
+  /*844x1125 image size*/
 
 }
 .btn{
 
-    background-color: orange;
-    color: black;
+  background-color: rgb(245, 108, 45);
+  color: black;
 }
 .btn:hover{
 background-color: #343435;
@@ -147,4 +147,63 @@ h1 {
 }
 .view-first:hover a.info {
     transition-delay: 0.2s;
+}
+
+video#bgvid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover;
+}
+
+.content {
+  display: none;
+}
+
+.btn-margin {
+  margin-top: 7px
+}
+
+#profile-view {
+  display: none;
+}
+
+#marketplace-view {
+  display: none;
+}
+
+.profile-area img {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.panel-body h3 {
+  margin-top: 0;
+}
+
+#loading {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+}
+
+img {
+  max-width: 300px;
 }
