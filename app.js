@@ -85,15 +85,18 @@ $('document').ready(function() {
     var loginStatus = $('.container h4');
     if (isAuthenticated()) {
       loginBtn.css('display', 'none');
-      logoutBtn.css('display', 'inline-block');
+      loginBtn.css('display', 'none');
+      homeViewBtn.css('display', 'none');
       profileViewBtn.css('display', 'inline-block');
       loginStatus.text(
         'You are logged in! You can now view your profile area.'
       );
+      $("#marketplace-view").show();
     } else {
-      homeView.css('display', 'inline-block');
+      homeViewBtn.css('display', 'none');
       loginBtn.css('display', 'inline-block');
       logoutBtn.css('display', 'none');
+      marketPlaceBtn.css('display', 'none');
       profileViewBtn.css('display', 'none');
       profileView.css('display', 'none');
       loginStatus.text('You are not logged in! Please log in to view your profile');
