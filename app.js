@@ -91,7 +91,7 @@ $('document').ready(function() {
       loginStatus.text(
         'You are logged in! You can now view your profile area.'
       );
-      $("#marketplace-view").show();
+      getMarketplace();
     } else {
       homeViewBtn.css('display', 'none');
       loginBtn.css('display', 'inline-block');
