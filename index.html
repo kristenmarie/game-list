@@ -16,12 +16,28 @@
   </div>
 
   <div class="content">
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
+    <nav class="navbar navbar-inverse">
+      <!-- <div class="container-fluid"> -->
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">Auth0 - jQuery</a>
+          <a class="navbar-brand" href="#">GameSpot</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#" id="btn-marketplace-view">Marketplace</a></li>
+            <li><a href="#" id="btn-profile-view">My Profile</a></li>
+            <li>
+              <button id="btn-home-view" class="btn btn-primary btn-margin">
+                Home
+              </button>
+            </li>
+            <li id="btn-login" class="btn btn-primary btn-margin">
+              Log In
+          </li>
 
-          <button id="btn-home-view" class="btn btn-primary btn-margin">
+          <li id="btn-logout" class="btn btn-primary btn-margin">
+              Log Out
+          </li>
+        </ul>
+          <!-- <button id="btn-home-view" class="btn btn-primary btn-margin">
               Home
           </button>
 
@@ -41,8 +57,8 @@
               Log Out
           </button>
 
-        </div>
-      </div>
+        </div> -->
+      <!-- </div> -->
     </nav>
 
     <main class="container">
@@ -76,19 +92,19 @@
         <br>
           <div class="row">
             <div class="col-lg-3">
-              <img src="img/deathstranding.jpg" alt="">
+              <img src="img/deathstranding.jpg" class="firstImg" alt="">
             </div>
 
             <div class="col-lg-3">
-              <img src="img/destiny2.jpg" alt="">
+              <img src="img/destiny2.jpg"  class="firstImg" alt="">
             </div>
 
             <div class="col-lg-3">
-              <img src="img/FFXV.jpg" alt="">
+              <img src="img/FFXV.jpg" class="firstImg" alt="">
             </div>
 
             <div class="col-lg-3">
-              <img src="img/ME3.jpeg" alt="">
+              <img src="img/ME3.jpeg" class="firstImg" alt="">
             </div>
           </div>
 
@@ -142,6 +158,10 @@
               <h3 class="nickname"></h3>
             </div>
             <pre class="full-profile"></pre>
+            </div>
+          </div>
+            <div class="favorite-games">
+            Here this:
           </div>
       </div>
     </main>
