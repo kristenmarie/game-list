@@ -85,7 +85,7 @@ $('document').ready(function() {
       logoutBtn.css('display', 'none');
       profileViewBtn.css('display', 'none');
       profileView.css('display', 'none');
-      loginStatus.text('You are not logged in! Please log in to continue.');
+      loginStatus.text('You are not logged in! Please log in to view your profile');
     }
   }
 
