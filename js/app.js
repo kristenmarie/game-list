@@ -134,10 +134,16 @@ $('document').ready(function() {
     }
   }
   $('.view').on('click', function(event){
+    $(this).addClass("ui-state-default");
 
     $(this).clone().appendTo('.favorite-games');
    $(this).off(event);
   });
+
+  $(function() {
+    $("#sortable").sortable();
+    $("#sortable").disableSelection();
+  } );
 
   function displayProfile() {
     // display the profile
