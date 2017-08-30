@@ -136,6 +136,7 @@ $('document').ready(function() {
   $('.view').on('click', function(event){
     $(this).addClass("ui-state-default");
 
+
     $(this).clone().appendTo('.favorite-games');
    $(this).off(event);
   });
@@ -146,7 +147,7 @@ $('document').ready(function() {
   } );
 
   $("a.info").on('click', function(event){
-    $(this).addClass("clicked");
+    $(this).css("background","rgb(245, 108, 45)");
   });
 
   function displayProfile() {
