@@ -20,6 +20,13 @@ video#bgvid {
 }
 
 /*=== BG VIDEO ENDS ==== */
+.btn-extra {
+ margin: 0 auto;
+ position: absolute;
+ top: 400px;
+ display: inline-block;
+}
+
 
 .btn-margin {
   margin-top: 7px
@@ -69,6 +76,7 @@ img {
 }
 .btn:hover{
 background-color: #343435;
+color: white;
 }
 
 

@@ -16,7 +16,6 @@ $('document').ready(function() {
   });
 
   var loginStatus = $('.container h4');
-  // var loginView = $('#login-view');
   var homeView = $('#home-view');
   var profileView = $('#profile-view');
   var marketplaceView = $('#marketplace-view');
@@ -28,23 +27,14 @@ $('document').ready(function() {
   var homeViewBtn = $('#btn-home-view');
   var profileViewBtn = $('#btn-profile-view');
 
-  // homeViewBtn.click(function() {
-  //   homeView.css('display', 'inline-block');
-  //   profileView.css('display', 'none');
-  //   marketplaceView.css('display', 'none');
-  // });
-
   profileViewBtn.click(function() {
-    // homeView.css('display', 'none');
     marketplaceView.css('display', 'none');
     profileView.css('display', 'inline-block');
     getProfile();
   });
 
   marketPlaceBtn.click(function() {
-    // homeView.css('display', 'none');
     profileView.css('display', 'none');
-    // marketplaceView.css('display', 'inline-block');
     getMarketplace();
   });
 
@@ -84,10 +74,8 @@ $('document').ready(function() {
   function displayButtons() {
     var loginStatus = $('.container h4');
     if (isAuthenticated()) {
-      // loginBtn.css('display', 'none');
       loginBtn.css('display', 'none');
       $(homeView).hide();
-      //homeViewBtn.css('display', 'none');
       profileViewBtn.css('display', 'inline-block');
       loginStatus.text(
         'You are logged in!'
@@ -95,6 +83,7 @@ $('document').ready(function() {
       getMarketplace();
     } else {
       loginBtn.css('display', 'inline-block');
+      // loginBtn.addClass('btn-extra');
       logoutBtn.css('display', 'none');
       marketPlaceBtn.css('display', 'none');
       profileViewBtn.css('display', 'none');
@@ -150,7 +139,6 @@ $('document').ready(function() {
   }
   function displayMarketPlace(){
     $("#marketplace-view").css('display', 'inline-block');
-    $(homeView).hide();
   }
 
   function handleAuthentication() {
