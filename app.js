@@ -1,6 +1,6 @@
 $('document').ready(function() {
   var userProfile;
-  var content = $('.content');
+  var content = $('.outer-content');
   var loadingSpinner = $('#loading');
   content.css('display', 'block');
   loadingSpinner.css('display', 'none');
@@ -89,7 +89,7 @@ $('document').ready(function() {
       homeViewBtn.css('display', 'none');
       profileViewBtn.css('display', 'inline-block');
       loginStatus.text(
-        'You are logged in! You can now view your profile area.'
+        'You are logged in!'
       );
       getMarketplace();
     } else {
@@ -173,8 +173,10 @@ $('document').ready(function() {
 });
 
 //testing
-$('.firstImg').on('click', function(){
-  var $this = $(this);
-  $($this).clone().appendTo('.favorite-games');
-  console.log($this);
-});
+// $('.info').on('click', function(event){
+//   var $this = $(this);
+//   console.log($this);
+//   $(event.target);
+//   $('.view').clone().appendTo('.favorite-games');
+//   console.log($this);
+// });

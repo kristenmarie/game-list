@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Teko');
 
 
-.content {
+.outer-content {
   display: none;
 }
 
@@ -48,7 +48,7 @@ img {
 }
 .btn{
 
-    background-color: orange;
+    background-color: rgb(245, 108, 45);
     color: black;
 }
 .btn:hover{
@@ -99,7 +99,6 @@ h1 {
     position: relative;
     text-align: center;
     cursor: default;
-    background: #fff url(../images/bgimg.jpg) no-repeat center center
 }
 .view .mask, .view .content {
     width: 300px;
