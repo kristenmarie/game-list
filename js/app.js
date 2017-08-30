@@ -145,6 +145,10 @@ $('document').ready(function() {
     $("#sortable").disableSelection();
   } );
 
+  $("a.info").on('click', function(event){
+    $(this).addClass("clicked");
+  });
+
   function displayProfile() {
     // display the profile
     $('#profile-view .nickname').text(userProfile.nickname);
