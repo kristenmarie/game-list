@@ -32,12 +32,14 @@ $('document').ready(function() {
     profileView.css('display', 'inline-block');
     getProfile();
     $("#favorite-games").show();
+    $(".title").show();
   });
 
   marketPlaceBtn.click(function() {
     profileView.css('display', 'none');
     getMarketplace();
     $("#favorite-games").hide();
+    $(".title").hide();
   });
 
   loginBtn.click(function(e) {
@@ -85,7 +87,6 @@ $('document').ready(function() {
       getMarketplace();
     } else {
       loginBtn.css('display', 'inline-block');
-      // loginBtn.addClass('btn-extra');
       logoutBtn.css('display', 'none');
       marketPlaceBtn.css('display', 'none');
       profileViewBtn.css('display', 'none');
