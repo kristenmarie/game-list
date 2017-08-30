@@ -164,6 +164,10 @@ h1 {
     text-transform: uppercase;
     box-shadow: 0 0 1px #000
 }
+
+.view a.clicked {
+  background: rgb(245, 108, 45);
+}
 .view a.info:hover {
     box-shadow: 0 0 5px #000
 }
@@ -203,10 +207,49 @@ h1 {
     opacity: 1;
     transform: translateY(0px);
 }
+
 .view-first:hover p {
     transition-delay: 0.1s;
 }
+
 .view-first:hover a.info {
     transition-delay: 0.2s;
 }
 
+#profile-view {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  padding-right: 165px;
+}
+
+.inner-profile {
+  background-color: rgb(245, 108, 45);
+  margin: 0 auto;
+  text-align: center;
+  width: 20%;
+  border-radius: 6px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.inner-profile img {
+  border-radius: 6px;
+}
+
+.inner-profile h3 {
+  margin-top: 20px;
+}
+
+#favorite-games {
+  display: none;
+}
+
+.title {
+  display: none;
+  padding-right: 165px;
+}
+
+i {
+  font-size: 30px;
+}

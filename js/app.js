@@ -133,23 +133,10 @@ $('document').ready(function() {
   $('.view').on('click', function(event){
     $(this).clone().appendTo('.favorite-games');
     $(this).off(event);
-    addEntry();
+    //addEntry();
   });
 
-  //Wed  - trying localStorage
-  function addEntry(){
-    //parse and JSON previously stored in allEntries
-    var allEntries = [];
-    var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
-    var entry = document.querySelector('.game');
-    localStorage.setItem("entry", JSON.stringify(entry));
-    allEntries.push(entry);
-    localStorage.setItem("allEntries", JSON.stringify(allEntries))
-  }
-
-  console.log
-
-
+ 
   function displayProfile() {
     // display the profile
     $('#profile-view .nickname').text(userProfile.nickname);
@@ -177,6 +164,6 @@ $('document').ready(function() {
   }
 
   handleAuthentication();
+
 });
 
-//testing
