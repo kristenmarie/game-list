@@ -130,6 +130,11 @@ $('document').ready(function() {
       displayMarketPlace();
     }
   }
+  $('.view').on('click', function(event){
+
+    $(this).clone().appendTo('.favorite-games');
+   $(this).off(event);
+  });
 
   function displayProfile() {
     // display the profile
@@ -161,10 +166,3 @@ $('document').ready(function() {
 });
 
 //testing
-$('.info').on('click', function(event){
-  var $this = $(this);
-  console.log($this);
-  $(event.target);
-  $('.view').clone().appendTo('.favorite-games');
-  console.log($this);
-});
