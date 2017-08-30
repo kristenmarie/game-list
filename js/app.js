@@ -132,24 +132,11 @@ $('document').ready(function() {
   }
   $('.view').on('click', function(event){
     $(this).clone().appendTo('.favorite-games');
-    $(this).off(event);
-    addEntry();
+    // $(this).off(event);
+    //addEntry();
   });
 
-  //Wed  - trying localStorage
-  function addEntry(){
-    //parse and JSON previously stored in allEntries
-    var allEntries = [];
-    var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
-    var entry = document.querySelector('.game');
-    localStorage.setItem("entry", JSON.stringify(entry));
-    allEntries.push(entry);
-    localStorage.setItem("allEntries", JSON.stringify(allEntries))
-  }
-
-  console.log
-
-
+ 
   function displayProfile() {
     // display the profile
     $('#profile-view .nickname').text(userProfile.nickname);
@@ -177,6 +164,43 @@ $('document').ready(function() {
   }
 
   handleAuthentication();
+
 });
 
-//testing
+ //testing
+  // $.ajax( "js/data.json", function( data ) {
+  //   var items = [];
+  //   console.log(data.games);
+  //   $.each( data.games[0], function( key, val ) {
+  //     // $.each(val, function(k,v){
+  //       items.push( "<li>" + v + "</li>" );
+  //      // });
+  //     console.log('tgus:', items);
+  //   });
+
+  //   $(".games-wrapper ul").
+  //   $( "<ul/>", {
+  //     "class": "my-new-list",
+  //     html: items.join( "" )
+  //   }).appendTo( ".games-wrapper ul" );
+  // });
+
+// function init2() {
+//     $.ajax({
+//         url: "js/data.json",
+//         type: "GET",
+//         dataType: "json",
+//         async: false,
+//         success: function (data) {
+//           $.each(data.games[0], function(key, val ) {
+//              $.each(val, function(k,v){
+//               items.push( "<li>" + v + "</li>" );
+//              });
+//           });
+//           console.log('gameTittle:', items);
+//         }
+//     });
+// }
+// $('body').on('click', function(){
+//   init2();
+// })
