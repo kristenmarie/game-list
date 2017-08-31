@@ -1,6 +1,6 @@
 # _Game List_
 
-#### _A web site for customizing game lists, 8.28.2917_
+#### _A web site for customizing game lists, 8.31.2017_
 
 #### By _**Kristen Kulha, Luciano Oliveira, Tyler Miller and Bably Kumari**_
 
