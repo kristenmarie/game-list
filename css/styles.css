@@ -47,13 +47,13 @@ h1 {
    font-size: 30px;
  }
 
- ul {
+ #added-games, #favorite-games {
    margin-bottom: 1000px;
  }
 
+
  .title {
    display: none;
-   padding-right: 165px;
  }
 
 .view {
@@ -259,7 +259,6 @@ color: white;
   text-align: center;
   padding: 20px;
   width: 100%;
-  padding-right: 165px;
 }
 
 #favorite-games {
