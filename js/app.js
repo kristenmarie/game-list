@@ -31,11 +31,17 @@ $('document').ready(function() {
     marketplaceView.css('display', 'none');
     profileView.css('display', 'inline-block');
     getProfile();
+    $("#favorite-games").show();
+    $("#added-games").show();
+    $(".title").show();
   });
 
   marketPlaceBtn.click(function() {
     profileView.css('display', 'none');
     getMarketplace();
+    $("#favorite-games").hide();
+    $("#added-games").hide();
+    $(".title").hide();
   });
 
   loginBtn.click(function(e) {
@@ -130,10 +136,82 @@ $('document').ready(function() {
       displayMarketPlace();
     }
   }
-  $('.view').on('click', function(event){
-    $(this).clone().appendTo('.favorite-games');
-    $(this).off(event);
-    //addEntry();
+
+  // $('.view').on('click', function(event){
+  //   $(this).clone().appendTo('.favorite-games');
+  //   $(this).off(event);
+  //   //addEntry();
+
+
+$('.info').on('click', function(){
+  infoObj = {};
+  $this = $(this);
+  infoObj.gameImg = $this.parent().parent().find('img').attr('src');
+  infoObj.gameTitle  = $this.parent().parent().find('h2').text();
+  infoObj.gameInfo = $this.parent().parent().find('p').text();
+  var oldInfoItems = JSON.parse(localStorage.getItem('infoArray')) || [];
+  oldInfoItems.push(infoObj);
+  localStorage.setItem('infoArray', JSON.stringify(oldInfoItems));
+});
+
+$('.like').on('click', function() {
+  likeObj = {};
+  $this = $(this);
+  likeObj.gameImg = $this.parent().parent().find('img').attr('src');
+  likeObj.gameTitle  = $this.parent().parent().find('h2').text();
+  likeObj.gameInfo = $this.parent().parent().find('p').text();
+  var oldLikeItems = JSON.parse(localStorage.getItem('likeArray')) || [];
+  oldLikeItems.push(likeObj);
+  localStorage.setItem('likeArray', JSON.stringify(oldLikeItems));
+});
+
+$('#btn-profile-view').one('click', function(){
+  if(localStorage.getItem('infoArray')){
+    var infoResult;
+    var savedInfoLocal = localStorage.getItem('infoArray');
+    savedInfoLocal = JSON.parse(savedInfoLocal);
+      var savedInfoLocalMap = savedInfoLocal.map(function(obj){
+        infoResult = $('.added-games');
+        infoOutput = `<div class="col-lg-3 game">
+                    <div class="view view-first">
+                      <img src="${obj.gameImg}"/>
+                      <div class="mask">
+                        <h2>${obj.gameTitle}</h2>
+                        <p>${obj.gameInfo}</p>
+                        <a href="#" class="info">♥</a>
+                      </div>
+                    </div>
+                  </div>`
+        var firstResult = infoResult.append(infoOutput);
+      });
+    } if(localStorage.getItem('likeArray')){
+      var likeResult;
+      var savedLikeLocal = localStorage.getItem('likeArray');
+      savedLikeLocal = JSON.parse(savedLikeLocal);
+        var savedLikeLocalMap = savedLikeLocal.map(function(obj){
+          likeResult = $('.favorite-games');
+          likeOutput = `<div class="col-lg-3 game">
+                      <div class="view view-first">
+                        <img src="${obj.gameImg}"/>
+                        <div class="mask">
+                          <h2>${obj.gameTitle}</h2>
+                          <p>${obj.gameInfo}</p>
+                          <a href="#" class="info">♥</a>
+                        </div>
+                      </div>
+                    </div>`
+          var secondResult = likeResult.append(likeOutput);
+        });
+      }
+  });
+
+  $(function() {
+    $(".sortable").sortable();
+    $(".sortable").disableSelection();
+  } );
+
+  $("a.info").on('click', function(event){
+    $(this).css("background","rgb(245, 108, 45)");
   });
 
  

@@ -98,6 +98,16 @@ h1 {
    box-shadow: 0 0 1px #000
 }
 
+.view a.like {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 10px;
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  box-shadow: 0 0 1px #000
+}
+
 .view a.clicked {
  background: rgb(245, 108, 45);
 }
@@ -248,5 +258,9 @@ color: white;
 }
 
 #favorite-games {
+  display: none;
+}
+
+#added-games {
   display: none;
 }
