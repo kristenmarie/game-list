@@ -77,25 +77,27 @@
 
 $('#btn-profile-view').on('click', function(){
   if(localStorage.getItem('itemsArray')){
+    var favsResult;
     var savedLocal = localStorage.getItem('itemsArray');
-    console.log('here is savedLocal: ', savedLocal);
     savedLocal = JSON.parse(savedLocal);
+    console.log('here is savedLocal: ', savedLocal);
+    console.log('savedLocal', savedLocal[0]);
     var savedLocalMap = savedLocal.map(function(obj){
-      var favsResult = $('.favs-display-data');
-      $.each(obj, function(index, key, value){
-        console.log('hey im value 0:', key,  value);
-        favsOutput = `<div class="col-lg-3 game">
+      favsResult = $('.favs-display-data');
+      favsOutput = `<div class="col-lg-3 game">
                   <div class="view view-first">
-                    <img src="${key.value}"/>
+                    <img src="${obj.gameImg}"/>
                     <div class="mask">
-                      <h2>${key.value}</h2> 
-                      <p>${key.value}</p>
+                      <h2>${obj.gameTitle}</h2> 
+                      <p>${obj.gameInfo}</p>
                       <a href="#" class="info">♥</a>
                     </div>
                   </div>
                 </div>`
-        favsResult.append(favsOutput);
-      });
+      var result = favsResult.append(favsOutput);
+      // if($(favsResult).children().length % 3 === 0){
+      //   favsResult.append(`<div class="row">${favsOutput}</div>`);
+      // }
     });
   }
 });
