@@ -133,22 +133,23 @@ $('document').ready(function() {
       displayMarketPlace();
     }
   }
-  $('.view').on('click', function(event){
-    $(this).addClass("ui-state-default");
-
-
-    $(this).clone().appendTo('.favorite-games');
-   $(this).off(event);
-  });
+  // $('.view').on('click', function(event){
+  //   $(this).addClass("ui-state-default");
+  //
+  //
+  //   $(this).clone().appendTo('.favorite-games');
+  //  $(this).off(event);
+  // });
 
   $(function() {
     $("#sortable").sortable();
     $("#sortable").disableSelection();
   } );
 
-  $("a.info").on('click', function(event){
-    $(this).css("background","rgb(245, 108, 45)");
-  });
+  // $("a.info").on('click', function(event){
+  //   $(this).css("background","rgb(245, 108, 45)");
+  // });
+
 
   function displayProfile() {
     // display the profile
