@@ -46,6 +46,10 @@ h1 {
    font-size: 30px;
  }
 
+ ul {
+   margin-bottom: 1000px;
+ }
+
  .title {
    display: none;
    padding-right: 165px;
