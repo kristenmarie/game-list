@@ -143,7 +143,8 @@ $('document').ready(function() {
   //   //addEntry();
 
 
-$('.info').on('click', function(){
+$('.info').on('click', function(event){
+  event.preventDefault();
   infoObj = {};
   $this = $(this);
   infoObj.gameImg = $this.parent().parent().find('img').attr('src');
@@ -154,7 +155,8 @@ $('.info').on('click', function(){
   localStorage.setItem('infoArray', JSON.stringify(oldInfoItems));
 });
 
-$('.like').on('click', function() {
+$('.like').on('click', function(event) {
+  event.preventDefault();
   likeObj = {};
   $this = $(this);
   likeObj.gameImg = $this.parent().parent().find('img').attr('src');
@@ -214,7 +216,7 @@ $('#btn-profile-view').one('click', function(){
     $(this).css("background","rgb(245, 108, 45)");
   });
 
- 
+
   function displayProfile() {
     // display the profile
     $('#profile-view .nickname').text(userProfile.nickname);
@@ -244,4 +246,3 @@ $('#btn-profile-view').one('click', function(){
   handleAuthentication();
 
 });
-
