@@ -1,5 +1,6 @@
 
-$('.info').one('click', function(){
+$('.info').one('click', function(e){
+  e.preventDefault();
   console.log('clicked');
   itemsObj = {};
   $this = $(this);
