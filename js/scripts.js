@@ -22,7 +22,7 @@ $('#btn-profile-view').one('click', function(){
     console.log('here is savedLocal: ', savedLocal);
     console.log('savedLocal', savedLocal[0]);
       var savedLocalMap = savedLocal.map(function(obj){
-        favsResult = $('.favs-display-data');
+        favsResult = $('.favorite-games');
         favsOutput = `<div class="col-lg-3 game">
                     <div class="view view-first">
                       <img src="${obj.gameImg}"/>

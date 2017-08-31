@@ -141,10 +141,10 @@ $('document').ready(function() {
   //  $(this).off(event);
   // });
 
-  $(function() {
-    $("#sortable").sortable();
-    $("#sortable").disableSelection();
-  } );
+  // $(function() {
+  //   $("#sortable").sortable();
+  //   $("#sortable").disableSelection();
+  // } );
 
   // $("a.info").on('click', function(event){
   //   $(this).css("background","rgb(245, 108, 45)");
