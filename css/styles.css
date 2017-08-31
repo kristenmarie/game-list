@@ -260,3 +260,7 @@ color: white;
 #favorite-games {
   display: none;
 }
+
+#added-games {
+  display: none;
+}

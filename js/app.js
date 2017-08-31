@@ -32,6 +32,7 @@ $('document').ready(function() {
     profileView.css('display', 'inline-block');
     getProfile();
     $("#favorite-games").show();
+    $("#added-games").show();
     $(".title").show();
   });
 
@@ -39,6 +40,7 @@ $('document').ready(function() {
     profileView.css('display', 'none');
     getMarketplace();
     $("#favorite-games").hide();
+    $("#added-games").hide();
     $(".title").hide();
   });
 
@@ -135,33 +137,35 @@ $('document').ready(function() {
   }
 
 $('.info').on('click', function(){
-  itemsObj = {};
+  infoObj = {};
   $this = $(this);
-  itemsObj.gameImg = $this.parent().parent().find('img').attr('src');
-  itemsObj.gameTitle  = $this.parent().parent().find('h2').text();
-  itemsObj.gameInfo = $this.parent().parent().find('p').text();
-  // call the callback function parameter and send itemsObj as argument, callback function then received the argument as you wanted it to be. Then execute stuff from there.
-  //callback(itemsObj);
-  var oldItems = JSON.parse(localStorage.getItem('itemsArray')) || [];
-  oldItems.push(itemsObj);
-  localStorage.setItem('itemsArray', JSON.stringify(oldItems));
+  infoObj.gameImg = $this.parent().parent().find('img').attr('src');
+  infoObj.gameTitle  = $this.parent().parent().find('h2').text();
+  infoObj.gameInfo = $this.parent().parent().find('p').text();
+  var oldInfoItems = JSON.parse(localStorage.getItem('infoArray')) || [];
+  oldInfoItems.push(infoObj);
+  localStorage.setItem('infoArray', JSON.stringify(oldInfoItems));
 });
 
 $('.like').on('click', function() {
-
+  likeObj = {};
+  $this = $(this);
+  likeObj.gameImg = $this.parent().parent().find('img').attr('src');
+  likeObj.gameTitle  = $this.parent().parent().find('h2').text();
+  likeObj.gameInfo = $this.parent().parent().find('p').text();
+  var oldLikeItems = JSON.parse(localStorage.getItem('likeArray')) || [];
+  oldLikeItems.push(likeObj);
+  localStorage.setItem('likeArray', JSON.stringify(oldLikeItems));
 });
 
 $('#btn-profile-view').one('click', function(){
-  if(localStorage.getItem('itemsArray')){
-    var favsResult;
-    var savedLocal = localStorage.getItem('itemsArray');
-    savedLocal = JSON.parse(savedLocal);
-    console.log('savedLocal here: ', savedLocal);
-    console.log('here is savedLocal: ', savedLocal);
-    console.log('savedLocal', savedLocal[0]);
-      var savedLocalMap = savedLocal.map(function(obj){
-        favsResult = $('.added-games');
-        favsOutput = `<div class="col-lg-3 game">
+  if(localStorage.getItem('infoArray')){
+    var infoResult;
+    var savedInfoLocal = localStorage.getItem('infoArray');
+    savedInfoLocal = JSON.parse(savedInfoLocal);
+      var savedInfoLocalMap = savedInfoLocal.map(function(obj){
+        infoResult = $('.added-games');
+        infoOutput = `<div class="col-lg-3 game">
                     <div class="view view-first">
                       <img src="${obj.gameImg}"/>
                       <div class="mask">
@@ -171,9 +175,27 @@ $('#btn-profile-view').one('click', function(){
                       </div>
                     </div>
                   </div>`
-        var result = favsResult.append(favsOutput);
+        var firstResult = infoResult.append(infoOutput);
       });
-    }
+    } if(localStorage.getItem('likeArray')){
+      var likeResult;
+      var savedLikeLocal = localStorage.getItem('likeArray');
+      savedLikeLocal = JSON.parse(savedLikeLocal);
+        var savedLikeLocalMap = savedLikeLocal.map(function(obj){
+          likeResult = $('.favorite-games');
+          likeOutput = `<div class="col-lg-3 game">
+                      <div class="view view-first">
+                        <img src="${obj.gameImg}"/>
+                        <div class="mask">
+                          <h2>${obj.gameTitle}</h2>
+                          <p>${obj.gameInfo}</p>
+                          <a href="#" class="info">♥</a>
+                        </div>
+                      </div>
+                    </div>`
+          var secondResult = likeResult.append(likeOutput);
+        });
+      }
   });
 
   $(function() {
