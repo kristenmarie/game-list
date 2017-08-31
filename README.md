@@ -18,8 +18,11 @@ _This web based application allows users to create an account and customize thei
 ## Setup/Installation Requirements
 
 * _Clone or download GitHub repository_
-* _Open index.html with web browser of choice_
 * _Follow prompts on screen_
+* _Install node_
+* _In terminal run : npm start_
+* _Open local host URL in web browser of choice_
+* _Follow on screen prompts._
 
 ## Known Bugs
 
