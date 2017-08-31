@@ -130,11 +130,11 @@ $('document').ready(function() {
       displayMarketPlace();
     }
   }
-  $('.view').on('click', function(event){
-    $(this).clone().appendTo('.favorite-games');
-    // $(this).off(event);
-    //addEntry();
-  });
+  // $('.view').on('click', function(event){
+  //   $(this).clone().appendTo('.favorite-games');
+  //   // $(this).off(event);
+  //   //addEntry();
+  // });
 
  
   function displayProfile() {

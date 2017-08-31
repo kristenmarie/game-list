@@ -1,24 +1,24 @@
 [
   {
-    "gameId"    : 1,
+    "gameId"    : "1",
     "gameImg"   : "img/deathstranding.jpg",
     "gameTitle" : "Death Stranding",
     "gameInfo"  : "Death Stranding is an upcoming action video game developed by Kojima Productions and published by Sony Interactive Entertainment for PlayStation 4. It is the first game by game director Hideo Kojima and his company following the 2015 disbandment of Kojima Productions as a subsidiary of Konami and subsequent reformation as an independent studio."
   },
   {
-    "gameId"    : 2,
+    "gameId"    : "2",
     "gameImg"   : "img/destiny2.jpg",
     "gameTitle" : "Destiny 2",
     "gameInfo"  : "Your adventures will take you across the solar system and back, as you wage war against the Red Legion, discover the secrets of our past, and aid allies in need of a hero. Destiny 2 provides an unprecedented combination of cinematic storytelling, thrilling solo adventures, and cooperative, competitive, and public gameplay. Rally your friends or venture alone. The choice is yours."
   },
   {
-    "gameId"    : 3,
+    "gameId"    : "3",
     "gameImg"   : "img/FFXV.jpg",
     "gameTitle" : "Final Fantasy XV",
     "gameInfo"  : "Noctis, crown prince of the magical Kingdom of Lucis, embarks on a quest to reclaim his homeland in this action RPG. Take up the steering wheel and hit the road with your colorful companions to explore a vast and breathtaking world. Invoke the power of your ancestors and effortlessly warp through the air in thrilling combat."
   },
   {
-    "gameId"    : 4,
+    "gameId"    : "4",
     "gameImg"   : "img/ME3.jpeg",
     "gameTitle" : "Mass Effect Andromeda",
     "gameInfo"  : "Mass Effect: Andromeda takes you to the Andromeda galaxy, far beyond the Milky Way. There, you'll lead our fight for a new home in hostile territory - where WE are the aliens. As you unfold the mysteries of the Andromeda Galaxy and the hope for humanity lies on your shoulders – You must ask yourself… How far will you go? 10/10 would play again-IGN."
