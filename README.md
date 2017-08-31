@@ -8,6 +8,13 @@
 
 _This web based application allows users to create an account and customize their own gaming lists._
 
+## Specifications
+
+* _Allows user to register and sign in_
+* _User dashboard that allows user to view lists of selected games._
+* _Users can drag and drop games in individual lists to adjust the order to their liking on their dashboards._
+* _When logging out it returns to the home screen with only log in button._
+
 ## Setup/Installation Requirements
 
 * _Clone or download GitHub repository_
@@ -16,15 +23,17 @@ _This web based application allows users to create an account and customize thei
 
 ## Known Bugs
 
-_There are no known bugs at this time._
+* _Will not add the selected games from the marketplace to the users profile until the page is refreshed._
+* _Because of how the page was set up when the page is refreshed it takes the user immediately back to marketplace._
+* _User dashboard is not properly formatted because of the way we chose to add the columns. Needs a condition to add a row after 3 columns are added._
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_Feel free to contact Kristen at kristen.m.kulha@gmail.com_
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+_HTML, CSS, JavaScript, jQuery, Auth0, Bootstrap_
 
 ### License
 
