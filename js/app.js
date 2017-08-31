@@ -89,6 +89,7 @@ $('document').ready(function() {
       getMarketplace();
     } else {
       loginBtn.css('display', 'inline-block');
+      // loginBtn.addClass('btn-extra');
       logoutBtn.css('display', 'none');
       marketPlaceBtn.css('display', 'none');
       profileViewBtn.css('display', 'none');
@@ -135,6 +136,12 @@ $('document').ready(function() {
       displayMarketPlace();
     }
   }
+
+  // $('.view').on('click', function(event){
+  //   $(this).clone().appendTo('.favorite-games');
+  //   $(this).off(event);
+  //   //addEntry();
+
 
 $('.info').on('click', function(){
   infoObj = {};
@@ -207,10 +214,11 @@ $('#btn-profile-view').one('click', function(){
     $(this).css("background","rgb(245, 108, 45)");
   });
 
+ 
   function displayProfile() {
     // display the profile
     $('#profile-view .nickname').text(userProfile.nickname);
-    //$('#profile-view .full-profile').text(JSON.stringify(userProfile, null, 2));
+    $('#profile-view .full-profile').text(JSON.stringify(userProfile, null, 2));
     $('#profile-view img').attr('src', userProfile.picture);
   }
   function displayMarketPlace(){
@@ -234,4 +242,6 @@ $('#btn-profile-view').one('click', function(){
   }
 
   handleAuthentication();
+
 });
+
